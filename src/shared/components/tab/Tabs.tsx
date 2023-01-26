@@ -61,11 +61,7 @@ export const Tabs: FunctionComponent<Props> = ({ children, isVertical }) => {
       </div>
       <div className="tab-body">
         {Children.map(children, (child, index) =>
-          state.activeTab === index ? (
-            <div key={index}>{React.cloneElement(child)}</div>
-          ) : (
-            <div key={index}></div>
-          )
+          state.activeTab === index ? <>{React.cloneElement(child)}</> : <></>
         )}
       </div>
     </div>

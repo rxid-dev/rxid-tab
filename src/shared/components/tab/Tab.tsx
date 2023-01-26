@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 
 export interface TabProps {
-  header: string;
+  header: string | JSX.Element;
   isActive?: boolean;
 }
 
